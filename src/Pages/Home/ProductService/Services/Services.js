@@ -1,16 +1,19 @@
+import { Link } from '@material-ui/core';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Services = (props) => {
-    const {img}=props.serv
+    const {img,name,description,_id}=props.serv
     return (
         
-        <div class="col">
-          <div class="card">
-            <img  src={img} class="card-img-top" alt="..."/>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-danger">Purchase </button>
+        <div className="col">
+          <div className="card">
+            <img  src={img} className="card-img-top" alt="..."/>
+            <div className="card-body">
+              <h5 className="card-title">{name}</h5>
+              <p className="card-text">{description}</p>
+              <button type="button" className="btn btn-danger"><NavLink to={`/placeOrder/${_id}`}>Purchase</NavLink> </button>
+           
             </div>
           </div>
         </div>

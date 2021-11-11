@@ -1,9 +1,11 @@
-import { Link } from '@material-ui/core';
-import { fontWeight } from '@mui/system';
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../Context/useAuth';
 
 const NavigationBar = () => {
+  const {user,SignOutPlace}=useAuth()
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
@@ -14,16 +16,31 @@ const NavigationBar = () => {
             <span className="navbar-toggler-icon"></span>
            
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <NavLink className="nav-link active" aria-current="page" to="/home">Home</NavLink>
           <NavLink className="nav-link active" aria-current="page" to="/explore">Explore</NavLink>
           </ul>
           </div>
          
           <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          
-           <NavLink to="/login"><button type="button" class="btn btn-danger">Login</button></NavLink>
+         
+         {
+           user.email?
+           <div>
+            
+             <NavLink to="/pay"><button type="button" className="btn ">pay</button></NavLink>
+             <NavLink to="/myorder"><button type="button" className="btn  mx-1">My order</button></NavLink>
+             <NavLink to="/review"><button type="button" className="btn mx-1">Review</button></NavLink>
+             <button onClick={SignOutPlace} type="button" className="btn btn-danger ">log out</button>
+           </div>
+           :
+           <NavLink to="/login"><button type="button" className="btn btn-danger">Login</button></NavLink>
+           
+         }
+        
+      
+           
           </div>
         </div>
       </nav>
