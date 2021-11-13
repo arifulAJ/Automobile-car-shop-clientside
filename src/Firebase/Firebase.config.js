@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBiYiBAv56Nncu8b2NmP8ibkSu2zsS46dk",
-    authDomain: "rolls-royce-car.firebaseapp.com",
-    projectId: "rolls-royce-car",
-    storageBucket: "rolls-royce-car.appspot.com",
-    messagingSenderId: "506213214408",
-    appId: "1:506213214408:web:c213f8bb1e026ffce79dfd"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
   };
 
   export default firebaseConfig;
