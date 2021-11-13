@@ -5,7 +5,7 @@ import Iteams from './Iteams';
 const ExploreItems = () => {
     const [car,setCar]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/cars')
+        fetch('https://safe-tundra-73084.herokuapp.com/cars')
         .then(res=>res.json())
         .then(data=>setCar(data.slice(6)))
     },[])

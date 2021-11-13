@@ -4,7 +4,7 @@ import FieldChield from './FieldChield';
 const ReviewsField = () => {
   const [refField,setRefField]=useState([])
   useEffect(()=>{
-    fetch('http://localhost:5000/review')
+    fetch('https://safe-tundra-73084.herokuapp.com/review')
     .then(res=>res.json())
     .then(data=>setRefField(data))
   },[])

@@ -17,7 +17,7 @@ const Placeorder = () => {
     
       alert('submitting')
       //send server data
-      fetch('http://localhost:5000/shiping',{
+      fetch('https://safe-tundra-73084.herokuapp.com/shiping',{
         method:'POST',
         headers:{
           "content-type":"application/json"
@@ -38,7 +38,7 @@ const Placeorder = () => {
 
 
     useEffect(()=>{
-        const url=`http://localhost:5000/cars/${idmon}`
+        const url=`https://safe-tundra-73084.herokuapp.com/cars/${idmon}`
         
         fetch(url)
         .then(res=>res.json())

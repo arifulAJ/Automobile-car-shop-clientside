@@ -14,7 +14,7 @@ const Review = () => {
     const onSubmit = data =>{
       alert("your review is success")
         
-        fetch('http://localhost:5000/review',{
+        fetch('https://safe-tundra-73084.herokuapp.com/review',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

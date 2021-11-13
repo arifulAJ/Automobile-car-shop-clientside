@@ -6,7 +6,7 @@ const MyOrder = () => {
     const {user}=useAuth()
     const [order,setOrder]=useState([])
     useEffect(()=>{
-     const   url=`http://localhost:5000/myOrder?email=${user.email}`
+     const   url=`https://safe-tundra-73084.herokuapp.com/myOrder?email=${user.email}`
 
         fetch(url)
         .then(res=>res.json())

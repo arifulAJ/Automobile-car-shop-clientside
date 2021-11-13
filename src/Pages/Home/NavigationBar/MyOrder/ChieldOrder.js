@@ -5,7 +5,7 @@ const ChieldOrder = (props) => {
   const {user}=useAuth()
     const{name,carImg,address,phone,carName,_id,setOrder,order}=props.main;
     const handelDelete=id=>{
-      const   url=`http://localhost:5000/myOrder/${id}`
+      const   url=`https://safe-tundra-73084.herokuapp.com/myOrder/${id}`
       fetch(url,{
         method:'DELETE'
       })
