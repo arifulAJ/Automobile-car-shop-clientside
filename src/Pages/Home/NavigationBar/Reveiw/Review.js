@@ -12,7 +12,8 @@ const Review = () => {
     const { register, handleSubmit } = useForm();
    
     const onSubmit = data =>{
-      
+      alert("your review is success")
+        
         fetch('http://localhost:5000/review',{
             method:'POST',
             headers:{
@@ -38,7 +39,7 @@ const Review = () => {
      
       <input {...register("name")}  defaultValue={user.displayName} className="w-50 my-2" /> <br/>
       <textarea {...register("description")}  placeholder="write something that you fell by exploring our company" className="w-50 my-2" /> <br/>
-      <input type="number" {...register("age", { min: 1, max: 5 })}  placeholder="type rating number" className="w-50 my-2"  /> <br />
+      <input type="number" {...register("number", { min: 1, max: 5 })}  placeholder="type rating number" className="w-50 my-2"  /> <br />
      
      
     
