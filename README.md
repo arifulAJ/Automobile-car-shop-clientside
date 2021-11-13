@@ -1,8 +1,9 @@
-# Getting Started with Create React App
+# This is the car company
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## user experience by exploring this web
+<li>user can by car </li>
 
 In the project directory, you can run:
 
