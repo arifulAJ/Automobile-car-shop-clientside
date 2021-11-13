@@ -6,12 +6,15 @@ import useAuth from '../../../../Context/useAuth';
 
 const Placeorder = () => {
   const {user}=useAuth()
+  const [brand,setBrand]=useState([])
+ 
   const { register, handleSubmit } = useForm();
-    const [brand,setBrand]=useState([])
+   
     const {idmon}=useParams()
    
    
     const onSubmit = data =>{ 
+    
       alert('submitting')
       //send server data
       fetch('http://localhost:5000/shiping',{
@@ -59,7 +62,7 @@ const Placeorder = () => {
       <input required   {...register("email")}  defaultValue={user.email}  className="w-50 " /> <br/>
       <input required   {...register("carImg")}  defaultValue={brand.img}  className="w-50 " /> <br/>
       <input {...register("name")}  defaultValue={user.displayName} className="w-50 my-2" /> <br/>
-      <input required  {...register("carName")}  defaultValue={brand.name} className="w-50 " /> <br/>
+      <input   {...register("carName")}   defaultValue={brand.name} className="w-50 " /> <br/>
       <input {...register('address')}  placeholder="type your address" className="w-50 my-2 "/> <br/>
       <input {...register("phone")}  placeholder="phone number" className="w-50 " /> <br/>
      

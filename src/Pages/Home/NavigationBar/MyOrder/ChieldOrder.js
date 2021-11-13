@@ -1,20 +1,38 @@
 import React from 'react';
+import useAuth from '../../../../Context/useAuth';
 
 const ChieldOrder = (props) => {
-    const{name,carImg,address,phone,carName}=props.main
-    console.log(props.main)
+  const {user}=useAuth()
+    const{name,carImg,address,phone,carName,_id,setOrder,order}=props.main;
+    const handelDelete=id=>{
+      const   url=`http://localhost:5000/myOrder/${id}`
+      fetch(url,{
+        method:'DELETE'
+      })
+      .then(res=>res.json())
+      .then(result=>{
+        console.log(result)
+        if(result.deletedCount>0){
+          alert("deleted successfully");
+          // const remainingUser=order.filter(ord=> ord._id!==id)
+          // setOrder(remainingUser);
+          console.log(id)
+        }
+      })
+    }
+
     return (
         <div>
-            <div class="col">
-    <div class="card h-100">
-      <img src={carImg}class="card-img-top" alt="..."/>
-      <div class="card-body">
-        <h5 class="card-title">Name : {name}</h5>
-        <h6 class="card-title">Car name : {carName}</h6>
-        <h6 class="card-title">Address : {address}</h6>
-        <h6 class="card-title"> Mobile : {phone}</h6>
-        <button type="button" class="btn btn-danger ">Delete</button>
-        <button type="button" class="btn btn-danger mx-5">Pending</button>
+            <div className="col">
+    <div className="card h-100">
+      <img src={carImg}className="card-img-top" alt="..."/>
+      <div className="card-body">
+        <h5 className="card-title">Name : {name}</h5>
+        <h6 className="card-title">Car name : {carName}</h6>
+        <h6 className="card-title">Address : {address}</h6>
+        <h6 className="card-title"> Mobile : {phone}</h6>
+        <button type="button" onClick={()=>handelDelete(_id)} className="btn btn-danger ">Delete</button>
+        <button type="button" className="btn btn-danger mx-5">Pending</button>
         
       </div>
     </div>

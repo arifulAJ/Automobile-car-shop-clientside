@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from './Banner/Banner';
 import Groth from './Gorth/Groth';
 import ProductService from './ProductService/ProductService';
-import Reviews from './Reviews/Reviews';
+import Reviews from './ReviewsField/ReviewsField';
 
 
 const Home = () => {

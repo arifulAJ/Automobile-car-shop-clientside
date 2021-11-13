@@ -11,7 +11,7 @@ const Login = () => {
  const location=useLocation()
 
  const url=location.state?.from|| "/placeOrder/:id"
- const Guri=location.state?.from|| "home"
+ const Guri=location.state?.from|| "/placeOrder/:id"
 
 const handelEmail=e=>{
     setEmail(e.target.value)
@@ -27,7 +27,7 @@ const handelSignInSubmit=e=>{
   .then((userCredential) => {
     setIsLoddingin(true)
     // Signed in 
-    history.replace(url)
+    history.push(url)
     const user = userCredential.user;
  
     setUser(user)

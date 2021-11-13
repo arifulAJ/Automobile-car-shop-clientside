@@ -37,12 +37,13 @@ const Resister = () => {
           displayName: name, 
         }).then(() => {
           // Profile updated!
+          history.replace(url)
           // ...
         }).catch((error) => {
           // An error occurred
           // ...
         });
-        history.replace(url)
+        // history.replace(url)
       })
       .catch((error) => {
         const errorCode = error.code;
