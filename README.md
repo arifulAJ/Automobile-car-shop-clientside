@@ -1,4 +1,10 @@
+# Web site mockup with diffrent divice 
+<img src="https://prnt.sc/26eiwdf?fbclid=IwAR2SBw7eM7HDpcCEm96Eqf9-YasSPERiImL4ZSnp_g7xQHtjsUVDUeK386s">
+
+
+
 # This is the car company
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
