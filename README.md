@@ -4,7 +4,8 @@
 
 
 # This is the Automobile car company.
-##techonology are uses 
+## techonology are uses 
+<li> JavaScript</li>
 <li> React.js</li>
 <li> Bootstrap </li>
 <li> Node.js</li>
