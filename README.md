@@ -1,5 +1,5 @@
 # Web site mockup with diffrent divice 
-<img src="https://prnt.sc/26eiwdf?fbclid=IwAR2SBw7eM7HDpcCEm96Eqf9-YasSPERiImL4ZSnp_g7xQHtjsUVDUeK386s">
+<img src="https://i.ibb.co/2KW8BkZ/download-1.png" />
 
 
 
