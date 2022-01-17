@@ -1,12 +1,20 @@
-# Web site mockup with diffrent divice 
+# Website mockup with different devices
 <img src="https://i.ibb.co/2KW8BkZ/download-1.png" />
 
 
 
-# This is the car company
+# This is the Automobile car company.
+##techonology are uses 
+<li> React.js</li>
+<li> Bootstrap </li>
+<li> Node.js</li>
+<li> Mongo DB</li>
+<li> Html</li>
+<li> CSS</li>
+<li> Firebase</li>
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## user experience by exploring this web
 <li>user can buy car </li>
